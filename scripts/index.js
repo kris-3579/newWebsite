@@ -1,7 +1,5 @@
-import * as THREE from 'three';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import spline from "./spline.js";
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@latest/build/three.module.js';
+
 
 // Select the canvas correctly from the HTML document
 const canvas = document.querySelector("#bg"); // Ensures Three.js renders on the existing <canvas class="bg">
