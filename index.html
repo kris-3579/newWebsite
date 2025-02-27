@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SeekBleek</title>
+  <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body>
+
+  <!-- Background Canvas (Separate from content) -->
+  <canvas id = "bg"> </canvas>
+
+  <!-- Page Container -->
+  <div class="page-div">
+
+    <!-- Sun/Moon Toggle -->
+    <div class="sun-moon">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path 
+          class="moon"
+          d="M3.32031 11.6835C3.32031 16.6541 7.34975 20.6835 12.3203 20.6835C16.1075 20.6835 19.3483 18.3443 20.6768 15.032C19.6402 15.4486 18.5059 15.6834 17.3203 15.6834C12.3497 15.6834 8.32031 11.654 8.32031 6.68342C8.32031 5.50338 8.55165 4.36259 8.96453 3.32996C5.65605 4.66028 3.32031 7.89912 3.32031 11.6835Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+      <p class="bleak">
+        BLEAK
+      </p>
+      <p class="wave">
+        WAVE
+      </p>
+    <!-- Buttons Section -->
+    <div class="buttons-div">
+      </div>
+      <div class="buttons1-div">
+        <button class="button">
+          <img src="./icons/controller.svg">
+          Games
+        </button>
+        <button class="button">
+          <img src="./icons/songs.svg" alt="Songs" />
+          Music Player
+        </button>
+      </div>
+
+      <div class="buttons2-div">
+        <button class="button">
+          <img src="./icons/genres.svg" alt="Genres" />
+          Genre
+        </button>
+        <button class="button">
+          <img src="./icons/albums.svg" alt="Albums" />
+          Albums
+        </button> 
+      </div>
+  
+
+    <!-- About Me Section -->
+     <div class = "bottomRight-div">
+    <div class="aboutMe-div">
+      <p>
+        <a href= "aboutme.html" >About Me </a>
+      </p>
+    </div>
+
+    <div class="changeIcon">
+    <p>
+      <span> Change Icon  </span>
+    </p>
+    </div>
+    </div>
+
+  </div> <!-- End of .page-div -->
+
+  <!-- Scripts -->
+  <script type ="module" src="./scripts/index.js"></script>
+  <script src="./node_modules/animejs/lib/anime.js" ></script>
+ <!--  <script type="module" src="./scripts/dancingPerson.js"></script> -->
+
+</body>
+</html>

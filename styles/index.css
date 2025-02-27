@@ -1,0 +1,141 @@
+
+canvas {
+  position: fixed;   /* Keep in the background */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;      /* Send to background */
+  display: block;
+  pointer-events: auto; /* Ensure canvas can receive pointer events */
+
+}
+
+.bleak {
+  position: absolute;
+  font-weight: bold;
+  transform: scaleY(0.5);
+  font-size: 25vh;
+
+}
+.wave {
+  position: absolute;
+  top: 50%;
+  font-weight: bold;
+  font-size: 25vh;
+  transform: scaleY(0.5);
+
+}
+
+body{
+  margin: 0;
+  overflow: hidden;
+}
+
+
+.page-div {
+  display: flex;
+  flex-direction: column; /* Stack buttons and About Me vertically */
+  /*justify-content: center;  Center the buttons-div in the middle vertically */
+  /*align-items: center;  Center align content horizontally */
+  height: 100vh; /* Full viewport height */
+}
+
+p {
+  color: white;
+  font-family: Futura, sans-serif;
+}
+
+.sun-moon {
+  display: flex;
+  position: absolute; /* Position it absolutely relative to the viewport */
+  top: 0; /* Distance from the top of the screen */
+  right: 0; /* Distance from the left of the screen */
+  
+}
+
+.sun-moon svg {
+  width: 50px;
+  height: 50px;
+  filter: invert(1);
+  display: block;
+  cursor: pointer;
+}
+
+
+.button {
+  margin: 0; /* Remove default margin */
+  color: white; /* Set text color to white */
+  display: flex;
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: center; /* Center align image and text horizontally */
+  justify-content: center; /* Center the content vertically */
+  background-color: transparent;
+  font-weight: bold;
+  font-family: Futura, sans-serif;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  margin-right: 50px;
+  transition: background-color 1s, color 1s, box-shadow 1s;
+}
+
+.button img {
+  height: 50px;
+  width: 50px;
+  display: block; /* Ensures the image doesn't add extra space */
+  margin-bottom: 10px; /* Add spacing between image and text */
+}
+
+
+.button:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.15);
+}
+
+.button:active {
+  opacity: 0.7;
+}
+
+
+.bottomRight-div {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+}
+
+
+.buttons-div {
+  display: flex;
+ 
+}
+
+.buttons1-div {
+
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+.buttons2-div {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+
+}
+
+.aboutMe-div a {
+  color: white;
+  position: relative;
+  right: 10px;
+  
+}
+
+
+
