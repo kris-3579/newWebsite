@@ -1,23 +1,3 @@
-import * as THREE from 'three';
-
-// SCENE
-const scene = new THREE.Scene();
-
-// CAMERA
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.setZ(30);
-
-// RENDERER
-const renderer = new THREE.WebGLRenderer({
-  canvas: document.querySelector("#bg") // Make sure <canvas id="bg"></canvas> exists in HTML
-});
-
-renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(window.innerWidth, window.innerHeight);
-
-
-
-
 // Global indexes to track the current slide in each category
 var slideIndexAlbums = 0;
 var slideIndexMovies = 0;
