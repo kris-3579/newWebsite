@@ -1,7 +1,9 @@
+
 // Global indexes to track the current slide in each category
 var slideIndexAlbums = 0;
 var slideIndexMovies = 0;
 var slideIndexBooks = 0;
+var slideshowPaused = false;
 
 // Function for albums
 function albumShow(n) {
@@ -24,6 +26,8 @@ function albumShow(n) {
 
 // Function for movies
 function movieShow(n) {
+
+    if (slideshowPaused) return;
     var movies = document.getElementsByClassName("movies");
     var dots = document.getElementsByClassName("dot2");
 
@@ -76,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let i = 0; i < dotsMovies.length; i++) {
         dotsMovies[i].addEventListener("click", function () {
             movieShow(i);
+            slideshowPaused = false;
         });
     }
 
@@ -86,10 +91,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Start all slideshows
-    albumShow(0);
-    movieShow(0);
-    bookShow(0);
 });
+
+// Start all slideshows
+albumShow(0);
+movieShow(0);
+bookShow(0);
+  
 
 

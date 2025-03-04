@@ -15,14 +15,14 @@ canvas {
   position: absolute;
   font-weight: bold;
   transform: scaleY(0.5);
-  font-size: 25vh;
+  font-size: 25vmin;
 
 }
 .wave {
   position: absolute;
   top: 50%;
   font-weight: bold;
-  font-size: 25vh;
+  font-size: 25vmin;
   transform: scaleY(0.5);
 
 }

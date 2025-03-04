@@ -14,28 +14,23 @@ body{
 
 .container {
   position: relative;
-  padding-top: 0.5in;
-  padding-bottom: 0.5in;
-  text-align: center;   
-  }
-
-.container img {
-    width:70%; 
-    height: 40vw; 
-    filter: grayscale(1);
-    box-shadow: 5px 5px 5px darkslategrey;
-    
-
+  top: 2in;
+  left: 50%;
+  transform: translate(-50%, -50%);  /* Moves the container back by half its width and height */
+  text-align: center;
+  width: 50%;
+  height: 40vh;
 }
+
 .container p {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   color: White;
   font-size: 3vw;
   text-shadow: 2px 2px #000000;
+  z-index: 1;
 
 
 }

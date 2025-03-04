@@ -54,7 +54,7 @@ const ico = new THREE.Mesh(geo, mat);
 
 ico.scale.setScalar(3);
 
-ico.position.x = 1.25
+ico.position.x = 800/ window.innerWidth;
 
 scene.add(ico);
 
