@@ -4,7 +4,7 @@ var scroll = window.requestAnimationFrame ||
              function(callback){ window.setTimeout(callback, 1000/60)};
 var elementsToShow = document.querySelectorAll('.show-on-scroll'); 
 
-function loop2() {
+function loop() {
 
   elementsToShow.forEach(function (element) {
     if (isElementInViewport(element)) {
@@ -14,11 +14,11 @@ function loop2() {
     }
   });
 
-  scroll(loop2);
+  scroll(loop);
 }
 
 // Call the loop for the first time
-loop2();
+loop();
 
 // Helper function from: http://stackoverflow.com/a/7557433/274826
 function isElementInViewport(el) {

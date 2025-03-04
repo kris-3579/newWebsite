@@ -48,6 +48,10 @@ header.is-visible {
   -webkit-transform: translate(-50%, calc(-50% + 1em));
           transform: translate(-50%, calc(-50% + 1em));
 }
+.is-visible {
+  opacity: 1 !important;
+  transition: opacity 0.5s ease-in-out;
+}
 
 .is-visible .main-photo {
   -webkit-transform: none;
