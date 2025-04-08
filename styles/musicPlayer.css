@@ -1,0 +1,10 @@
+canvas {
+  position: fixed;   /* Keep in the background */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;      /* Send to background */
+  display: block;
+  pointer-events: auto; /* Ensure canvas can receive pointer events */
+}

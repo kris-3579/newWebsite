@@ -43,6 +43,8 @@ camera.position.z = 2;
 // Subdivision level of 2 makes it smoother
 const geo = new THREE.IcosahedronGeometry(0.1, 2);
 
+const geo2 = new THREE.DodecahedronGeometry();
+
 // Create a basic mesh material with a light blue color and enable wireframe mode
 const mat = new THREE.MeshBasicMaterial({
   color: 0xccff, // Hex color (light blue)
@@ -52,11 +54,18 @@ const mat = new THREE.MeshBasicMaterial({
 
 const ico = new THREE.Mesh(geo, mat);
 
+const dodec = new THREE.Mesh(geo2, mat);
+
 ico.scale.setScalar(3);
 
-ico.position.x = 800/ window.innerWidth;
+dodec.scale.setScalar(3);
+
+ico.position.x = 2000/ window.innerWidth;
+
+dodec.position.x = 2000/window.innerWidth;
 
 scene.add(ico);
+scene.add(dodec);
 
 const earth = new THREE.Mesh(geo, mat);
 
@@ -100,6 +109,7 @@ function animate() {
 
   ico.rotation.y += 0.01
 
+  dodec.rotation.y += 0.001
   const currentTime = clock.getElapsedTime()
 
   
