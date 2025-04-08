@@ -1,5 +1,5 @@
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@latest/build/three.module.js';
-
+import anime from 'animejs';
 
 // Select the canvas correctly from the HTML document
 const canvas = document.querySelector("#bg"); // Ensures Three.js renders on the existing <canvas class="bg">
