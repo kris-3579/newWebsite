@@ -1,6 +1,6 @@
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@latest/build/three.module.js';
 import spline from './spline'
-import { Wireframe } from 'three/examples/jsm/Addons.js';
+
 const mockPlaylist = [
   {
     title: "Pink + White",
