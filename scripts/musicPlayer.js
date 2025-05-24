@@ -1,7 +1,24 @@
-//import { ThreeMFLoader } from 'three/examples/jsm/Addons.js';
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@latest/build/three.module.js';
 import spline from './spline'
 import { Wireframe } from 'three/examples/jsm/Addons.js';
+const mockPlaylist = [
+  {
+    title: "Pink + White",
+    artist: "Frank Ocean",
+    artwork: "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*lfE1NRGhG2uwkAcRNGTq4g@2x.jpeg"
+  },
+  {
+    title: "Nights",
+    artist: "Frank Ocean",
+    artwork: "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*lfE1NRGhG2uwkAcRNGTq4g@2x.jpeg"
+  },
+  {
+    title: "Lost",
+    artist: "Frank Ocean",
+    artwork: "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*lfE1NRGhG2uwkAcRNGTq4g@2x.jpeg"
+  },
+  // Add more mock tracks here...
+];
 
 // Select the canvas correctly from the HTML document
 const canvas = document.querySelector("#bg"); // Ensures Three.js renders on the existing <canvas class="bg">
@@ -81,18 +98,35 @@ scene.add(tube);
 const clock = new THREE.Clock();
 let previousTime = 0;
 
+// const loader = new THREE.TextureLoader();
+// mockPlaylist.forEach((track, i) => {
+//   const p = (i / mockPlaylist.length + Math.random() * 0.1) % 1;
+//   const pos = tubeGeo.parameters.path.getPointAt(p);
+//   pos.x += Math.random() - 0.4;
+//   pos.z += Math.random() - 0.4;
+
+//   loader.load(track.artwork, (texture) => {
+//     const mat = new THREE.MeshBasicMaterial({ map: texture, side: THREE.DoubleSide, transparent: true });
+//     const geo = new THREE.PlaneGeometry(0.7, 0.7);
+//     const mesh = new THREE.Mesh(geo, mat);
+//     mesh.position.copy(pos);
+//     mesh.lookAt(camera.position); // Optional: make it face the camera
+//     scene.add(mesh);
+//   });
+// });
 
 const numBoxes = 55;
 const size = 0.075;
 
 const boxGeo = new THREE.BoxGeometry(size, size, size);
+const boxMat = new THREE.MeshBasicMaterial({
+  color: 0xffffff,
+  wireframe: true
+});
 for (let i = 0; i < numBoxes; i += 1) {
-  const boxMat = new THREE.MeshBasicMaterial({
-    color: 0xffffff,
-    wireframe: true
-  });
+  
   const box = new THREE.Mesh(boxGeo, boxMat);
-  const p = (i / numBoxes + Math.random() * 0.1) % 1;
+  const p = (i / numBoxes + Math.random() * 0.1) % 1; // this calculates a value p that represents a percentage along the path where p is number between 0 and 1
   const pos = tubeGeo.parameters.path.getPointAt(p);
   pos.x += Math.random() - 0.4;
   pos.z += Math.random() - 0.4;
@@ -114,7 +148,7 @@ for (let i = 0; i < numBoxes; i += 1) {
 }
 
 function updateCamera(t) {
-  const time = t * 0.1;
+  const time = t * 0.04;
   const looptime = 8 * 1000;
   const p = (time % looptime) / looptime;
   const pos = tubeGeo.parameters.path.getPointAt(p);
