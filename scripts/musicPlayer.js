@@ -1,5 +1,5 @@
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@latest/build/three.module.js';
-import spline from './spline'
+import spline from '/scripts/spline.js'
 
 const mockPlaylist = [
   {
